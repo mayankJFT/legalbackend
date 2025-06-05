@@ -82,7 +82,7 @@ class BulkDeleteRequest(BaseModel):
     message_indices: List[int]
 
 # === Redis Configuration ===
-REDIS_URL = os.getenv("REDIS_URL", "rediss://red-d10mfebipnbc738vva60:wgTOsEyBPrQuiyHyoxgf5MVa7NYIdgOE@oregon-keyvalue.render.com:6379")
+REDIS_URL = os.getenv("REDIS_URL", "redis://red-d10mfebipnbc738vva60:6379")
 REDIS_TTL = int(os.getenv("REDIS_TTL", 60 * 60 * 24 * 7))  # Default 7 days
 CACHE_TTL = int(os.getenv("CACHE_TTL", 60 * 60 * 24))  # Cache responses for 24 hours
 
